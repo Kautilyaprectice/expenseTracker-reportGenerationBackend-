@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Report</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <h1>Expense Report</h1>
+    <br>
+    <p id="current-date"></p>
+    <br><br>
+    <h2 id="current-month"></h2>
+    <br>
+    <div class="table">
+        <table id="expenseTable">
+            <thead>
+                <tr>
+                    <th class="date">Date</th>
+                    <th class="description">Description</th>
+                    <th class="category">Category</th>
+                    <th class="expense">Expense</th>
+                </tr>
+            </thead>
+            <tbody id="expenseBody">
+
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <div class="filter">
+        <button class="filterButton" id="daily">Daily</button>
+        <button class="filterButton" id="weekly">Weekly</button>
+        <button class="filterButton" id="monthly">Monthly</button>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <h2>Yearly Report</h2>
+    <br><br>
+    <div class="table">
+        <table id="yearlyReportTable">
+            <thead>
+                <tr>
+                    <th class="date">Month</th>
+                    <th class="expense">Expense</th>
+                </tr>
+            </thead>
+            <tbody id="yearlyReportBody">
+
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <h2>Notes Report <span id="current-year"></span></h2>
+    <div class="table">
+        <table id="notesReportTable">
+            <thead>
+                <tr>
+                    <th class="date">Date</th>
+                    <th class="description">Notes</th>
+                </tr>
+            </thead>
+            <tbody id="notesReportBody">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="./report.js"></script>
+</body>
+</html>

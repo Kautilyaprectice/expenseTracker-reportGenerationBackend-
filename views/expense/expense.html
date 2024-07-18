@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="expense.css">
+</head>
+<body>
+    <div class="premium-button-container">
+        <button id="rzp-button">Buy Premium</button>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    </div>
+    <div id="premiumStatus"></div>
+    <h2>Expense Tracker</h2>
+    <form id="expenseForm">
+        <label for="expenseAmount">Enter Expense Amount:</label>
+        <input type="number" min="0" max="10000000" name="expenseAmount" id="expenseAmount" placeholder="Add Expense Amount" required>
+        <br><br>
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" placeholder="Enter description" required>
+        <br><br>
+        <label for="category">Choose The Category:</label>
+        <select name="category" id="category" required>
+            <option value="fuel">Fuel</option>
+            <option value="food">Food</option>
+            <option value="electricity">Electricity</option>
+            <option value="movie">Movie</option>
+        </select>
+        <br><br>
+        <button type="submit">Add Expense</button>
+    </form>
+    
+    <hr>
+    <div>
+        <h2>Expenses</h2>
+        <br><br>
+        <ul id="expenseList"></ul>
+    </div>
+    <hr>
+
+    <div>
+        <ul id="leaderboardList"></ul>
+    </div>
+    <hr>
+
+    <div>
+        <ul id="historyList"></ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="./expense.js"></script>
+</body>
+</html>
